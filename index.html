@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sondage Étudiant</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f7fa;
+        margin: 0;
+        padding: 20px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #2c3e50;
+    }
+
+    form {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    fieldset {
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 15px;
+    }
+
+    legend {
+        font-weight: bold;
+        color: #34495e;
+    }
+
+    label {
+        display: block;
+        margin-top: 10px;
+    }
+
+    input, select {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+    }
+
+    .inline {
+        width: auto;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    button {
+        background: #3498db;
+        color: white;
+        border: none;
+        padding: 12px;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #2980b9;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>Sondage sur les Conditions de Vie des Étudiants</h1>
+
+<form id="surveyForm">
+
+<!-- 1. Identification -->
+<fieldset>
+<legend>1. Identification générale</legend>
+
+<label>Nom</label>
+<input type="text" required>
+
+<label>Prénom</label>
+<input type="text" required>
+
+<label>Sexe</label>
+<select required>
+    <option>Masculin</option>
+    <option>Féminin</option>
+</select>
+
+<label>Matricule</label>
+<input type="text" placeholder="22TXXXX">
+
+<label>Date de naissance</label>
+<input type="date">
+
+<label>Statut matrimonial</label>
+<select>
+    <option>Célibataire</option>
+    <option>Marié(e)</option>
+    <option>Divorcé(e)</option>
+</select>
+
+<label>Nombre d'enfants</label>
+<input type="number" min="0">
+
+</fieldset>
+
+<!-- 2. Situation académique -->
+<fieldset>
+<legend>2. Situation académique</legend>
+
+<label>Établissement</label>
+<input type="text">
+
+<label>Niveau / Faculté</label>
+<input type="text">
+
+<label>Situation académique</label>
+<select>
+    <option>Nouveau</option>
+    <option>Ancien</option>
+</select>
+
+<label>Boursier ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+<label>Type de bourse / Montant</label>
+<input type="text">
+
+<label>Année de retard</label>
+<select>
+    <option>0</option>
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4+</option>
+</select>
+
+</fieldset>
+
+<!-- 3. Localisation -->
+<fieldset>
+<legend>3. Localisation et Logement</legend>
+
+<label>Quartier actuel</label>
+<input type="text">
+
+<label>Type de cohabitation</label>
+<select>
+    <option>Seul(e)</option>
+    <option>En famille</option>
+    <option>Colocation</option>
+    <option>Cité universitaire</option>
+    <option>Mini cité</option>
+</select>
+
+<label>Loyer mensuel</label>
+<input type="number">
+
+<label>Distance fac-domicile (km)</label>
+<input type="number">
+
+<label>Moyen de transport</label>
+<select>
+    <option>Marche</option>
+    <option>Moto</option>
+    <option>Taxi</option>
+    <option>Bus universitaire</option>
+</select>
+
+<label>Problème majeur</label>
+<select>
+    <option>Pénurie d'eau</option>
+    <option>Insécurité</option>
+    <option>Insalubrité / Égouts</option>
+    <option>Nuisances sonores</option>
+    <option>Coupures d'électricité</option>
+    <option>Autre</option>
+</select>
+
+</fieldset>
+
+<!-- 4. Finances -->
+<fieldset>
+<legend>4. Conditions financières</legend>
+
+<label>Source de revenu principale</label>
+<select>
+    <option>Parents</option>
+    <option>Job étudiant</option>
+    <option>Bourse</option>
+    <option>Aucune</option>
+</select>
+
+<label>Dépenses mensuelles (FCFA)</label>
+<input type="number">
+
+<label>Difficultés financières ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+</fieldset>
+
+<!-- 5. Études et numérique -->
+<fieldset>
+<legend>5. Conditions d'études et numérique</legend>
+
+<label>Possède un ordinateur ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+<label>Possède un smartphone ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+<label>Accès internet stable ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+<label>Lieu d'étude principal</label>
+<select>
+    <option>Chambre</option>
+    <option>Bibliothèque</option>
+    <option>Amphi vide</option>
+</select>
+
+<label>Accès aux bibliothèques</label>
+<select>
+    <option>Suffisant</option>
+    <option>Insuffisant</option>
+</select>
+
+</fieldset>
+
+<!-- 6. Santé -->
+<fieldset>
+<legend>6. Santé et Nutrition</legend>
+
+<label>Nombre de repas par jour</label>
+<input type="number" min="0">
+
+<label>Mange au resto U ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+<label>Accès aux cliniques universitaires ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+<label>Assurance maladie ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+<label>Niveau de stress</label>
+<select>
+    <option>Faible</option>
+    <option>Moyen</option>
+    <option>Élevé</option>
+</select>
+
+<label>Besoin de suivi psychologique ?</label>
+<select>
+    <option>Oui</option>
+    <option>Non</option>
+</select>
+
+</fieldset>
+
+<button type="submit">Envoyer</button>
+
+</form>
+
+<script>
+document.getElementById("surveyForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    alert("Merci ! Vos réponses ont été enregistrées (simulation).");
+});
+</script>
+
+</body>
+</html>
